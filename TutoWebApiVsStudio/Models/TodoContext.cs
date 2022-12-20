@@ -17,6 +17,6 @@ namespace TutoWebApiVsStudio.Models
         /// <summary>
         /// Propriedade no qual representa a tabela TodoItems na base de dados
         /// </summary>
-        public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<TodoItem> TodoItems { get; set; } = null!;
     }
 }
