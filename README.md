@@ -28,3 +28,10 @@ dotnet run --project TutoWebApiVsStudio
 5. Será exibido a url configurada no arquivo /Properties/launchSettings.json onde é definido o profile do projeto.
 
 **Obs: Pelo ubuntu a execução não obtem sucesso ao pressionar Ctrl+F5**
+
+# Testando execução local do projeto em Container Docker Desktop.
+1. Acessar https://code.visualstudio.com/docs/containers/quickstart-aspnet-core#_test-the-service-container
+2. Seguir o tutorial.
+
+**Obs: É necessário instalar o docker desktop para este tutorial, vale ressaltar que os testes foram feitos com o projeto no ubuntu WSL**
+**Outro detalhe, o swagger não foi possível acessar com este teste, porém ao executar com o comando run normal, o projeto executa normalmente mesmo com as inclusões de novos arquivos para execução no container**
