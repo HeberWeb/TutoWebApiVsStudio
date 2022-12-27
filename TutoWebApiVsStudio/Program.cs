@@ -8,8 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 //Usando banco de dados na memória - "TudoList" é o nome do banco
-builder.Services.AddDbContext<TodoContext>(opt => 
-    opt.UseInMemoryDatabase("TudoList"));
+//builder.Services.AddDbContext<TodoContext>(opt => 
+//    opt.UseInMemoryDatabase("TudoList"));
+
+//Usando banco de dados sql, valor do .GetConnectionString configurada no arquivo appsettings.json
+builder.Services.AddDbContext<TodoContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("TutoWebApiDatabase")));
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
